@@ -1,11 +1,367 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Conger Yang</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#0e0e0e;
+
+color:white;
+
+font-family:'Cormorant Garamond',serif;
+
+overflow-x:hidden;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:25px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:40px;
+
+font-size:18px;
+
+letter-spacing:1px;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:500;
+
+}
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.7)),
+
+url("/images/photo.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:flex-end;
+
+padding-left:10%;
+
+padding-bottom:10%;
+
+}
+
+.hero-text{
+
+max-width:650px;
+
+animation:fade 2s ease;
+
+}
+
+h1{
+
+font-size:95px;
+
+font-weight:400;
+
+letter-spacing:3px;
+
+}
+
+.subtitle{
+
+font-size:34px;
+
+margin-top:10px;
+
+color:#dddddd;
+
+}
+
+.desc{
+
+margin-top:35px;
+
+font-size:22px;
+
+line-height:1.7;
+
+color:#d5d5d5;
+
+max-width:520px;
+
+}
+
+.scroll{
+
+margin-top:50px;
+
+letter-spacing:5px;
+
+font-size:16px;
+
+opacity:.8;
+
+}
+
+section{
+
+padding:140px 10%;
+
+}
+
+h2{
+
+font-size:60px;
+
+margin-bottom:40px;
+
+}
+
+.card{
+
+max-width:800px;
+
+padding:40px;
+
+background:#1a1a1a;
+
+border-radius:12px;
+
+margin-top:30px;
+
+}
+
+.card h3{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+font-size:22px;
+
+line-height:1.8;
+
+color:#cccccc;
+
+}
+
+footer{
+
+padding:80px;
+
+text-align:center;
+
+color:#888;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+Conger Yang
+
+</div>
+
+<div>
+
+<a href="#research">Research</a>
+
+<a href="#reading">Reading</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Conger Yang</h1>
+
+<div class="subtitle">
+
+Comparative Literature · Film Studies
+
+</div>
+
+<div class="desc">
+
+University College London
+
+<br><br>
+
+Researching perception,
+intermediality,
+cinematic experience,
+and the relation between film and literature.
+
+</div>
+
+<div class="scroll">
+
+↓
+
+SCROLL
+
+</div>
+
+</div>
+
+</section>
+
+<section id="research">
+
+<h2>Research</h2>
+
+<div class="card">
+
+<h3>Current Project</h3>
+
+<p>
+
+My research explores how contemporary literature and cinema reorganize perception through anticipation, technological infrastructures and mediated experience.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="reading">
+
+<h2>Reading Notes</h2>
+
+<div class="card">
+
+<h3>Coming Soon</h3>
+
+<p>
+
+Reading notes will be published here.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="card">
+
+<h3>Email</h3>
+
+<p>
+
+uclzfya@ucl.ac.uk
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Conger Yang
+
+</footer>
+
+</body>
+
+</html>
